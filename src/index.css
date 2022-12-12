@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+  .todo-item {
+    @apply relative text-todo-text mr-auto cursor-pointer dark:text-todo-text-dark;
+  }
+  .todo-item-checked {
+    @apply line-through text-line-through dark:text-line-through-dark;
+  }
+  .todo-unchecked {
+    @apply absolute -left-12 w-4 h-4 rounded-full border border-circle-light bg-no-repeat bg-center cursor-pointer;
+  }
+  .todo-checked {
+    @apply bg-checked border-0;
+  }
+}

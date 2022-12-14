@@ -10,19 +10,19 @@ module.exports = {
       colors: {
         "footer": "hsl(228, 45%, 44%)",
         "heading": "hsl(0, 0%, 98%)",
-        "todo-dark": "hsl(237, 14%, 26%)",
         "todo-light": "hsl(0, 0%, 98%)",
+        "todo-dark": "hsl(235, 24%, 19%)",
         "circle-light": "hsl(236, 33%, 92%)",
         "circle-dark": "hsl(233, 14%, 35%)",
         "line-through": "hsl(233, 11%, 84%)",
-        "dark-grayish-blue": "hsl(236, 9%, 61%)",
+        "light-gray": "hsl(236, 9%, 61%)",
         "todo-text": "hsl(235, 19%, 35%)",
         "todo-text-dark": "hsl(234, 39%, 85%)",
-        "todo-text-hover-dark": "hsl(236, 33%, 92%)",
-
-        "very-dark-blue": "hsl(235, 21%, 11%)",
-        "very-dark-desaturated-blue": "hsl(235, 24%, 19%)",
-        "line-through-dark": "hsl(234, 11%, 52%)",
+        "button-hover-dark": "hsl(236, 33%, 92%)",
+        "body-dark": "hsl(235, 21%, 11%)",
+        "light-gray-dark": "hsl(234, 11%, 52%)",
+        "active-button": "hsl(220, 98%, 61%)",
+        "line-between": "hsl(237, 14%, 26%)",
       },
       backgroundImage: {
         "checked":

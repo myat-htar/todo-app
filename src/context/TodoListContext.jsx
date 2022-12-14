@@ -23,6 +23,11 @@ function TodoListContext(props) {
       })
     );
   }
+  function clearCompletedTodoFromList() {
+    setTodoList(prevTodo =>
+      prevTodo.filter(item => item.isCompleted === false)
+    );
+  }
   return (
     <todoData.Provider
       value={{
@@ -30,6 +35,7 @@ function TodoListContext(props) {
         addToTodoList,
         removeFromTodoList,
         markCompletedTodoList,
+        clearCompletedTodoFromList,
       }}
     >
       {props.children}

@@ -6,12 +6,26 @@
     @apply relative text-todo-text mr-auto cursor-pointer dark:text-todo-text-dark;
   }
   .todo-item-checked {
-    @apply line-through text-line-through dark:text-line-through-dark;
+    @apply line-through text-line-through text-light-gray dark:text-light-gray-dark;
   }
   .todo-unchecked {
     @apply absolute -left-12 w-4 h-4 rounded-full border border-circle-light bg-no-repeat bg-center cursor-pointer;
   }
   .todo-checked {
     @apply bg-checked border-0;
+  }
+  .border-image {
+    background-image: linear-gradient(hsl(0, 0%, 98%), hsl(0, 0%, 98%)),
+      linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border: 1px solid transparent;
+  }
+  .border-image-dark {
+    background-image: linear-gradient(hsl(235, 24%, 19%), hsl(235, 24%, 19%)),
+      linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border: 1px solid transparent;
   }
 }

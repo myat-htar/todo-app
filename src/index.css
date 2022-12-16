@@ -9,7 +9,7 @@
     @apply line-through text-line-through text-light-gray dark:text-light-gray-dark;
   }
   .todo-unchecked {
-    @apply absolute -left-12 w-4 h-4 rounded-full border border-circle-light bg-no-repeat bg-center cursor-pointer;
+    @apply absolute -left-12 w-5 h-5 rounded-full border border-circle-light bg-no-repeat bg-center cursor-pointer;
   }
   .todo-checked {
     @apply bg-checked border-0;

@@ -8,7 +8,6 @@ module.exports = {
         "primary": ["Josefin Sans", "sans-serif"],
       },
       colors: {
-        "footer": "hsl(228, 45%, 44%)",
         "heading": "hsl(0, 0%, 98%)",
         "todo-light": "hsl(0, 0%, 98%)",
         "todo-dark": "hsl(235, 24%, 19%)",

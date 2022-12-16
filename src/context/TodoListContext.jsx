@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 
 const todoData = React.createContext();
 function TodoListContext(props) {
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState(
+    () => JSON.parse(localStorage.getItem("todoList")) || []
+  );
   function addToTodoList(data) {
     setTodoList(prevTodo => {
       return [...prevTodo, { todo: data, isCompleted: false, id: nanoid() }];
@@ -28,6 +30,12 @@ function TodoListContext(props) {
       prevTodo.filter(item => item.isCompleted === false)
     );
   }
+  function reorderList(reorderedList) {
+    setTodoList(reorderedList);
+  }
+  useEffect(() => {
+    localStorage.setItem("todoList", JSON.stringify(todoList));
+  }, [todoList]);
   return (
     <todoData.Provider
       value={{
@@ -36,6 +44,7 @@ function TodoListContext(props) {
         removeFromTodoList,
         markCompletedTodoList,
         clearCompletedTodoFromList,
+        reorderList,
       }}
     >
       {props.children}

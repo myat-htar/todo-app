@@ -52,11 +52,11 @@ function App() {
           {/* input */}
           <div className="flex items-center bg-todo-light dark:bg-todo-dark mt-10 mb-5 px-3 sm:px-5 py-3 rounded">
             <div
-              className="w-4 h-4 sm:w-6 sm:h-6 bg-inherit mr-5 rounded-full border border-circle-light dark:border-circle-dark cursor-pointer"
+              className="w-5 h-5 bg-inherit mr-5 rounded-full border border-circle-light dark:border-circle-dark cursor-pointer"
               onClick={addTodo}
             ></div>
             <input
-              className="bg-inherit text-todo-text dark:text-todo-text-dark border-0 outline-0"
+              className="w-11/12 bg-inherit text-todo-text dark:text-todo-text-dark border-0 outline-0"
               type="text"
               value={inputData}
               onChange={e => setInputData(e.target.value)}

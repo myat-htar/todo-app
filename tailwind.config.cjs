@@ -23,10 +23,6 @@ module.exports = {
         "active-button": "hsl(220, 98%, 61%)",
         "line-between": "hsl(237, 14%, 26%)",
       },
-      backgroundImage: {
-        "checked":
-          "url('./src/images/icon-check.svg'), linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))",
-      },
     },
     letterSpacing: {
       "widest": "0.8rem",

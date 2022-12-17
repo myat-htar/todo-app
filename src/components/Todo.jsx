@@ -11,7 +11,6 @@ function Todo() {
     markCompletedTodoList,
     clearCompletedTodoFromList,
   } = useContext(todoData);
-  console.log(todoList);
   const [todoType, setTodoType] = useState("all");
   function getNumberOfActiveTodos() {
     let length = todoList.reduce((acc, item) => {
@@ -37,13 +36,10 @@ function Todo() {
   return (
     <>
       <div className="flex flex-col divide-y dark:divide-line-between bg-todo-light dark:bg-todo-dark rounded shadow-xl">
-        <ReactSortable list={todoList} setList={reorderList}>
+        <ReactSortable list={todoList} setList={reorderList} animation={150}>
           {changeDisplayedTodo().map(item => {
             return (
-              <div
-                key={item.id}
-                className="flex items-center px-3 sm:px-5 py-3 group"
-              >
+              <div key={item.id} className="flex px-3 sm:px-5 py-3 group">
                 <input
                   type="checkbox"
                   id={item.id}
@@ -54,13 +50,13 @@ function Todo() {
                 <label
                   htmlFor={item.id}
                   className="todo-item
-                peer-checked:todo-item-checked
-                before:todo-unchecked
-                hover:before:border-dark-grayish-blue dark:before:border-circle-dark  
-                peer-checked:before:todo-checked
-                dark:peer-checked:before:todo-checked
-                group-hover:before:border-image
-                dark:group-hover:before:border-image-dark"
+                  peer-checked:todo-item-checked
+                  before:todo-unchecked
+                  hover:before:border-dark-grayish-blue dark:before:border-circle-dark  
+                  peer-checked:before:todo-checked
+                  dark:peer-checked:before:todo-checked
+                  group-hover:before:border-image
+                  dark:group-hover:before:border-image-dark"
                 >
                   <span className=""></span>
                   {item.todo}

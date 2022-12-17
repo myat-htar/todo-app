@@ -15,7 +15,7 @@ import Footer from "./components/Footer";
 function App() {
   const [inputData, setInputData] = useState("");
   const { theme, toggleTheme } = useContext(themeData);
-  const { todoList, addToTodoList } = useContext(todoData);
+  const { addToTodoList } = useContext(todoData);
   function addTodo(e) {
     if (inputData !== "") {
       addToTodoList(inputData);
@@ -25,16 +25,18 @@ function App() {
   return (
     <div className={`${theme}`}>
       <div className={`dark:bg-body-dark font-primary text-lg min-h-screen`}>
-        <img
-          src={theme === "dark" ? bg_mobile_dark : bg_mobile_light}
-          alt="background image"
-          className="md:hidden w-full"
-        />
-        <img
-          src={theme === "dark" ? bg_desktop_dark : bg_desktop_light}
-          alt="background image"
-          className="hidden md:block w-full"
-        />
+        <div role="img" aria-label="background image">
+          <img
+            src={theme === "dark" ? bg_mobile_dark : bg_mobile_light}
+            alt="background image"
+            className="md:hidden w-full"
+          />
+          <img
+            src={theme === "dark" ? bg_desktop_dark : bg_desktop_light}
+            alt="background image"
+            className="hidden md:block w-full"
+          />
+        </div>
 
         <main className="w-11/12 max-w-lg mx-auto relative -top-28 sm:-top-36 xl:-top-56 ">
           {/* heading */}

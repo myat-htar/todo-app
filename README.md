@@ -1,6 +1,6 @@
 # Todo app(Frontend Mentor Challenge)
 
-![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Todo app coding challenge](./src/images/bg-desktop-dark.jpg)
 
 ### Developed using `React` and `Tailwind CSS`.
 

@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer components {
   .todo-item {
-    @apply relative text-todo-text mr-auto cursor-pointer dark:text-todo-text-dark;
+    @apply relative text-todo-text grow cursor-pointer dark:text-todo-text-dark;
   }
   .todo-item-checked {
     @apply line-through text-line-through text-light-gray dark:text-light-gray-dark;
@@ -12,7 +12,9 @@
     @apply absolute -left-12 w-5 h-5 rounded-full border border-circle-light bg-no-repeat bg-center cursor-pointer;
   }
   .todo-checked {
-    @apply bg-checked border-0;
+    background-image: url("../public/Assets/icon-check.svg"),
+      linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    @apply border-0;
   }
   .border-image {
     background-image: linear-gradient(hsl(0, 0%, 98%), hsl(0, 0%, 98%)),
